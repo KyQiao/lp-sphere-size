@@ -60,13 +60,8 @@ def main():
     
     # Maximize sum of radii subject to non-negativity and spatial constraints
     prob = cp.Problem(cp.Maximize(c.T @ r), [r >= 0, M @ r <= b])
-    prob.solve(solver=cp.SCS)   # SCS is a robust default solver for CVXPY
+    prob.solve()
     
-    if prob.status not in ["optimal", "optimal_inaccurate"]:
-        print(f"Warning: LP solver returned status '{prob.status}'")
-    else:
-        print("Optimization successful!")
-
     # --- Plotting Results ---
     print("Generating plot...")
     plt.figure(figsize=(6, 5))
@@ -76,12 +71,12 @@ def main():
     plt.ylim(0.999, 1.001)
     plt.xlabel(r"Original Radius ($r_i$)", fontsize=12)
     plt.ylabel(r"Ratio ($r'_i / r_i$)", fontsize=12)
-    plt.title("LP Optimization Result: 3D RCP Sample", fontsize=14)
+    plt.title("LP Result: 3D RCP Sample", fontsize=14)
     plt.grid(True, linestyle='--', alpha=0.6)
     plt.tight_layout()
     
     # Save and show
-    plt.savefig("lp_optimization_result.png", dpi=300)
+    plt.savefig("result.png", dpi=300)
     plt.show()
 
 if __name__ == "__main__":
