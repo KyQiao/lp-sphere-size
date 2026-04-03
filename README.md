@@ -12,7 +12,7 @@ This repository contains a minimum working example demonstrating the Linear Prog
 * `3dRCP.csv`: A sample dataset containing 512 particles in a 3D Random Close Packing configuration. Columns represent $(x, y, z, r)$, where $x, y, z$ are the coordinates and $r$ is the currently estimated particle radius.
 * `requirements.txt`: List of Python dependencies required to run the code.
 
-## Requirements and Installation
+## Requirements
 
 The code relies on standard scientific Python packages (`numpy`, `scipy`, `matplotlib`) and the `cvxpy` library for convex optimization.
 
@@ -21,3 +21,7 @@ To install the required dependencies, we recommend creating a virtual environmen
 ```bash
 pip install -r requirements.txt
 ```
+The result is attached:
+
+<img width="600" height="500" alt="result" src="https://github.com/user-attachments/assets/9d136ce5-a005-4a38-943d-fe4843713610" />
+
