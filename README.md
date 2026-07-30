@@ -9,7 +9,7 @@ This repository contains a minimum working example demonstrating the Linear Prog
 ## Repository Contents
 
 * `lp_algorithm.py`: The main Python script that sets up and solves the LP problem.
-* `3dRCP.csv`: A sample dataset containing 512 particles in a 3D Random Close Packing configuration. Columns represent $(x, y, z, r)$, where $x, y, z$ are the coordinates and $r$ is the currently estimated particle radius.
+* `3dRCP.csv`: A sample dataset containing 512 particles in a 3D Random Close Packing configuration. Columns represent $(x, y, z, r)$, where $x, y, z$ are the coordinates and $r$ is the particle radius.
 * `requirements.txt`: List of Python dependencies required to run the code.
 
 ## Requirements
